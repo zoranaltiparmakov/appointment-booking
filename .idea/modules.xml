@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api-gateway.main.iml" filepath="$PROJECT_DIR$/.idea/modules/api-gateway.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/appointment-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/appointment-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.altiparmakov.api-gateway.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.altiparmakov.api-gateway.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.altiparmakov.appointment-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.altiparmakov.appointment-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api-gateway/com.altiparmakov.doctor-app.api-gateway.main.iml" filepath="$PROJECT_DIR$/.idea/modules/api-gateway/com.altiparmakov.doctor-app.api-gateway.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/appointment-service/com.altiparmakov.doctor-app.appointment-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/appointment-service/com.altiparmakov.doctor-app.appointment-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/survey-service/com.altiparmakov.doctor-app.survey-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/survey-service/com.altiparmakov.doctor-app.survey-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.altiparmakov.survey-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.altiparmakov.survey-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api-gateway/doctor-app.api-gateway.main.iml" filepath="$PROJECT_DIR$/.idea/modules/api-gateway/doctor-app.api-gateway.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/appointment-service/doctor-app.appointment-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/appointment-service/doctor-app.appointment-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/survey-service/doctor-app.survey-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/survey-service/doctor-app.survey-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service/doctor-app.user-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service/doctor-app.user-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/survey-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/survey-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service.main.iml" />
+    </modules>
+  </component>
+</project>

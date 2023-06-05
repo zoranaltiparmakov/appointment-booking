@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "name": "user",
+      "password_hash": "NFuQ59S1bFg0KhzIYrdlwuUMVSqHoBTnLOu/IISfVhjldD7z",
+      "hashing_algorithm": "rabbit_password_hashing_sha256",
+      "tags": "administrator"
+    }
+  ],
+  "vhosts": [
+    {
+      "name": "\/"
+    }
+  ],
+  "permissions": [
+    {
+      "user": "user",
+      "vhost": "\/",
+      "configure": ".*",
+      "write": ".*",
+      "read": ".*"
+    }
+  ],
+  "parameters": [],
+  "policies": [],
+  "queues": [
+    {
+      "name": "appointment_finished_queue",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    }
+  ],
+  "exchanges": [
+    {
+      "name": "appointment_event",
+      "vhost": "/",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    }
+  ],
+  "bindings": [
+    {
+      "source": "appointment_event",
+      "vhost": "/",
+      "destination": "appointment_finished_queue",
+      "destination_type": "queue",
+      "routing_key": "appointment.status.#",
+      "arguments": {}
+    }
+  ]
+}

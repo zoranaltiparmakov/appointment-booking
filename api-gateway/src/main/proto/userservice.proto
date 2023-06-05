@@ -1,0 +1,19 @@
+syntax = "proto3";
+package user;
+
+option java_multiple_files = true;
+option java_package = "com.altiparmakov.protos";
+option java_outer_classname = "UserServiceProto";
+
+message UserAuthRequest {
+  string username = 1;
+  string password = 2;
+}
+
+message UserAuthResponse {
+  bool valid = 1;
+}
+
+service AuthService {
+  rpc auth(UserAuthRequest) returns (UserAuthResponse) {};
+}

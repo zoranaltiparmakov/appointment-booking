@@ -1,0 +1,22 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka
+spring:
+  profiles:
+    active: dev
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:postgresql://localhost:5433/test
+    username: test
+    password: test
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        default_schema: userservice
+server:
+  port: 9991

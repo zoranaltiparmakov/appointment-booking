@@ -1,0 +1,11 @@
+{
+    "queues":[
+            {"name":"test","vhost":"/","durable":true,"auto_delete":false,"arguments":{}},
+            ],
+    "exchanges":[
+            {"name":"data_incoming","vhost":"/","type":"fanout","durable":true,"auto_delete":false,"internal":false,"arguments":{}},
+            ],
+    "bindings":[
+            {"source":"data_incoming","vhost":"/","destination":"store_to_es","destination_type":"queue","routing_key":"","arguments":{}},
+    ]
+}

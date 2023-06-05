@@ -1,0 +1,105 @@
+# Doctor Authentication
+# @name doctorAuth
+POST {{apiGateway}}/auth
+Content-Type: application/json
+
+{
+  "username": "doctor1",
+  "password": "password"
+}
+
+> {% client.global.set("token", response.body.token); %}
+
+###
+
+# Patient Authentication
+# @name patientAuth
+POST {{apiGateway}}/auth
+Content-Type: application/json
+
+{
+  "username": "patient1",
+  "password": "password"
+}
+
+> {% client.global.set("token", response.body.token); %}
+
+###
+
+# Create available timetable
+POST {{apiGateway}}/api/timetable
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+[
+  {
+    "date": "10.08.2022",
+    "time": "06:45"
+  },
+  {
+    "date": "13.08.2022",
+    "time": "07:15"
+  }
+]
+
+###
+
+# Get all appointments
+GET {{apiGateway}}/api/timeslots?medicalService={{medicalService}}
+Authorization: Bearer {{token}}
+
+###
+
+# Reserve an appointment
+POST {{apiGateway}}/api/appointments
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "doctorId": 1,
+  "medicalServiceId": 3,
+  "timeslot": {
+    "date": "13.08.2022",
+    "time": "07:15"
+  }
+}
+
+###
+
+# Cancel an appointment
+DELETE {{apiGateway}}/api/appointments/{{appointmentId}}/cancel
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+###
+
+# Finish an appointment
+PATCH {{apiGateway}}/api/appointments/{{appointmentId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "appointmentStatus": "DONE"
+}
+
+###
+
+# Get survey
+GET {{apiGateway}}/api/survey?doctorId={{doctorId}}&timeslot={{timeslot}}&medicalServiceId={{medicalServiceId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+###
+
+# Submit the survey filled by the patient
+POST {{apiGateway}}/api/survey/submit
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "doctorId": 1,
+  "patientId": 3,
+  "caseId": "daeb4fax",
+  "caseDateTime": "2022-08-13 07:15:00",
+  "satisfaction": 1
+}

@@ -1,0 +1,12 @@
+spring:
+  devtools:
+    livereload:
+      port: 35730
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+logging:
+  level:
+    core: DEBUG

@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  postres-db:
+    image: postgres
+    container_name: postres-db
+    restart: always
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgredb:/var/lib/postgresql
+    environment:
+      POSTGRES_DB: test
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+
+  rabbitmq:
+    image: rabbitmq:3.10-management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq:/var/lib/rabbitmq
+      - ./config/rabbitmq-def.json:/etc/rabbitmq/definitions.json:ro
+      - ./config/rabbitmq.config:/etc/rabbitmq/rabbitmq.config:ro
+
+volumes:
+  postgredb:
+  rabbitmq:

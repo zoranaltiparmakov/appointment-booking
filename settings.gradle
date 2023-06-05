@@ -1,0 +1,6 @@
+rootProject.name = 'doctor-app'
+
+include 'api-gateway'
+include 'appointment-service'
+include 'survey-service'
+include 'user-service'

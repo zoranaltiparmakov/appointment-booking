@@ -1,0 +1,12 @@
+syntax = "proto3";
+package appointment;
+
+option java_multiple_files = true;
+option java_package = "com.altiparmakov.protos";
+option java_outer_classname = "AppointmentEventProto";
+
+message AppointmentEvent {
+  string doctorId = 1;
+  string caseDateTime = 2;
+  string medicalService = 3;
+}
